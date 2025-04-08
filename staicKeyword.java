@@ -7,6 +7,10 @@ public class staicKeyword {
 
         //calling static method
         Counter.increment();
+        System.out.println("Total moons of saturn" + Saturn.moonCount);
+
+        // Accessing the static nested class by creating an object.
+        Saturn.Inner inner = new Saturn.Inner();
     }
 }
 class Counter {
@@ -22,10 +26,21 @@ class Counter {
         COUNT++;
         System.out.println(COUNT);
     }
+}
+//static blocks
+class Saturn{
+    public static int moonCount ;
 
-    //Static Blocks
     static {
-
+        moonCount = 62;
     }
 
+    //Static nested classes --> A class can have static nested class which can be accessed by using outer class name.
+    //class inside a class
+    public static class Inner{
+        public Inner(){
+
+        }
+    }
 }
+
