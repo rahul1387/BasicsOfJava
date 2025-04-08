@@ -40,6 +40,7 @@ class Saturn{
     public static class Inner{
         public Inner(){
 
+
         }
     }
 }
